@@ -2,9 +2,12 @@
 admin lte is free for everyone. use it anywhere
 
 <h2 style="color:blue;">Admin Lte V1.0</h2>
-<img src="src/images/Screenshot 2023-08-26 at 17-16-43 AdminLte v1.0.png">
-Download and use it in your project
 
+<img src="src/images/Screenshot 2023-08-26 at 17-16-43 AdminLte v1.0.png">
+
+<br>
+
+<h2> Download and use it in your project </h2>
 step 1.
 <p>download and open project in your vs code</p>
 
