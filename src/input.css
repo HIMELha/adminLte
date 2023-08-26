@@ -60,7 +60,6 @@ header {
     justify-content: center;
     align-items: center;
 }
-
 .menu {
     @apply  p-1 px-2 block text-[14px] text-white  font-light hover:bg-slate-500 hover:transition rounded-md capitalize
 }
