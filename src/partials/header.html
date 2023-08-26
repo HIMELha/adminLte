@@ -1,0 +1,126 @@
+
+   <!-- header starts here -->
+    <header class="bg-gray-600">
+        <div class="mx-auto flex justify-between items-center sm:px-4">
+            <div class="p-2 flex items-center gap-2 sm:gap-4">
+                <i id="navToggler" class="fa-solid fa-bars text-[16px] text-white cursor-pointer"></i>
+                <h2 class="text-[18px] text-white font-bold">Admin Lite</h2>
+                <a href="index.html" class="text-[14px] text-white font-thin">Home</a>
+            </div>
+            <div id="headerIcons" class="p-2 flex items-center">
+
+                <div class="flex items-center sm:gap-2 relative">
+                    <button id="profileBtn" class="flex items-center gap-2">
+                        <div class="flex-col hidden sm:block sm:flex"><p class="text-white text-[12px]">John Deo</p><span class="text-[10px] text-white font-light">Web Developer</span></div>
+                        <img src="images/profile.jpg" alt="" class="profile">
+                        <i id="arrow" class="fa-solid fa-angle-down text-white text-[14px] mr-4"></i>
+                    </button>
+                    <div class="profileMenu">
+                        <ul>
+                            <li class="mt-2 mb-1"><a href="Profile.html" class="menu text-[14px]"><i class="fa-solid fa-user-shield mr-2"></i>My Profile</a></li>
+                            <li class="mb-1"><a href="Profile.html" class="menu text-[14px]"><i class="fa-solid fa-user-pen mr-2"></i>Edit Profile</a></li>
+                            <li class="mb-2"><a href="settings.html" class="menu text-[14px]"><i class="fa-solid fa-gear mr-2"></i>Account Settings</a></li>
+                            <hr>
+                            <li class="mt-2"><a href="login.html" class="menu text-[14px]"><i class="fa-solid fa-right-from-bracket mr-2"></i>Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <i id="notifyBtn" class="fa-solid fa-bell text-[16px] text-white cursor-pointer"></i><div id="notify"><span>4</span></div>
+                </div>
+                <!-- notfications -->
+                    <div id="notifyNav" class="w-[200px] px-2 pt-3 pb-1 bg-[#24303F] absolute top-[48px] right-0">
+                        <p class="text px-4">Notfications</p>
+                        <ul class="mt-2 flex flex-col gap-1">
+                            <li class="p-2 border border-orange-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-solid fa-circle-exclamation mr-1 text-red-300"></i>Payment gatway reached to limit <span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+                            <li class="p-2 border border-green-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-regular fa-circle-check mr-1 text-green-300"></i>last 2hour 4,900+ page views <span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-solid fa-clipboard-check mr-1 text-sky-300"></i>Your site has reached to 1 million views <span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+
+                            <li class="p-2 border border-yellow-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-solid fa-skull-crossbones mr-1 text-red-400"></i>87 spam user detected in last 2hour<span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+                            <a href="notifications.html" class="text-[13px] text-sky-300 text-center hover:underline">All notfication</a>
+                        </ul>
+                    </div>
+                <!-- !notfications -->
+                <div class="relative">
+                    <i id="msgBtn" class="fa-solid fa-envelope ml-6 text-[16px] text-white cursor-pointer"></i><div id="notify"><span>6</span></div>
+                </div>
+                    <!-- messages -->
+                    <div id="msgNav" class="w-[200px] px-2 pt-3 pb-1 bg-[#24303F] absolute top-[48px] right-0">
+                        <div class="px-4 flex justify-between items-center">
+                            <p class="text !px-0">Messages</p>
+                            <i class="fa-solid fa-gear text-gray-100 cursor-pointer"></i>
+                        </div>
+                        <ul class="mt-2 flex flex-col gap-1">
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/profile.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/php.png" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/269684781_594096101688265_7584943640798012884_n.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/325937500_727203338994731_2443928018776317505_n.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/HimelHa_robot_war_in_future_world_243a5fe4-6376-4164-95b7-ba3b8d2b076d.png" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/profile.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <a href="messages.html" class="text-[13px] text-sky-300 text-center hover:underline">All message</a>
+                        </ul>
+                    </div>
+                <!-- !messages -->
+                <i id="fullscreenBtn" class="fa-solid fa-expand mx-2 sm:ml-6 text-[16px] text-white cursor-pointer"></i>
+            </div>
+        </div>
+    </header>
+   <!-- header !starts here -->

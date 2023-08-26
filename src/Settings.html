@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <!-- <link href="https://himelha.github.io/adminLte/dist/output.css" rel="stylesheet"> -->
+    <meta name="description" content="AdminLte is an open source admin dashboard">
+    <meta property="og:title" content="AdminLte v1.0">
+    <title>AdminLte v1.0 dashboard</title>
+    <link rel="icon" type="image/png" href="images/favicon1.png">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="overflow-x-hidden">
+   <!-- header starts here -->
+    <header class="bg-gray-600">
+        <div class="mx-auto flex justify-between items-center sm:px-4">
+            <div class="p-2 flex items-center gap-2 sm:gap-4">
+                <i id="navToggler" class="fa-solid fa-bars text-[16px] text-white cursor-pointer"></i>
+                <h2 class="text-[18px] text-white font-bold">Admin Lite</h2>
+                <a href="index.html" class="text-[14px] text-white font-thin">Home</a>
+            </div>
+            <div id="headerIcons" class="p-2 flex items-center">
+
+                <div class="flex items-center sm:gap-2 relative">
+                    <button id="profileBtn" class="flex items-center gap-2">
+                        <div class="flex-col hidden sm:block sm:flex"><p class="text-white text-[12px]">John Deo</p><span class="text-[10px] text-white font-light">Web Developer</span></div>
+                        <img src="images/profile.jpg" alt="" class="profile">
+                        <i id="arrow" class="fa-solid fa-angle-down text-white text-[14px] mr-4"></i>
+                    </button>
+                    <div class="profileMenu">
+                        <ul>
+                            <li class="mt-2 mb-1"><a href="Profile.html" class="menu text-[14px]"><i class="fa-solid fa-user-shield mr-2"></i>My Profile</a></li>
+                            <li class="mb-1"><a href="Profile.html" class="menu text-[14px]"><i class="fa-solid fa-user-pen mr-2"></i>Edit Profile</a></li>
+                            <li class="mb-2"><a href="settings.html" class="menu text-[14px]"><i class="fa-solid fa-gear mr-2"></i>Account Settings</a></li>
+                            <hr>
+                            <li class="mt-2"><a href="login.html" class="menu text-[14px]"><i class="fa-solid fa-right-from-bracket mr-2"></i>Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <i id="notifyBtn" class="fa-solid fa-bell text-[16px] text-white cursor-pointer"></i><div id="notify"><span>4</span></div>
+                </div>
+                <!-- notfications -->
+                    <div id="notifyNav" class="w-[200px] px-2 pt-3 pb-1 bg-[#24303F] absolute top-[48px] right-0">
+                        <p class="text px-4">Notfications</p>
+                        <ul class="mt-2 flex flex-col gap-1">
+                            <li class="p-2 border border-orange-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-solid fa-circle-exclamation mr-1 text-red-300"></i>Payment gatway reached to limit <span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+                            <li class="p-2 border border-green-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-regular fa-circle-check mr-1 text-green-300"></i>last 2hour 4,900+ page views <span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-solid fa-clipboard-check mr-1 text-sky-300"></i>Your site has reached to 1 million views <span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+
+                            <li class="p-2 border border-yellow-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-solid fa-skull-crossbones mr-1 text-red-400"></i>87 spam user detected in last 2hour<span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+                            <a href="notifications.html" class="text-[13px] text-sky-300 text-center hover:underline">All notfication</a>
+                        </ul>
+                    </div>
+                <!-- !notfications -->
+                <div class="relative">
+                    <i id="msgBtn" class="fa-solid fa-envelope ml-6 text-[16px] text-white cursor-pointer"></i><div id="notify"><span>6</span></div>
+                </div>
+                    <!-- messages -->
+                    <div id="msgNav" class="w-[200px] px-2 pt-3 pb-1 bg-[#24303F] absolute top-[48px] right-0">
+                        <div class="px-4 flex justify-between items-center">
+                            <p class="text !px-0">Messages</p>
+                            <i class="fa-solid fa-gear text-gray-100 cursor-pointer"></i>
+                        </div>
+                        <ul class="mt-2 flex flex-col gap-1">
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/profile.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/php.png" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/269684781_594096101688265_7584943640798012884_n.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/325937500_727203338994731_2443928018776317505_n.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/HimelHa_robot_war_in_future_world_243a5fe4-6376-4164-95b7-ba3b8d2b076d.png" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/profile.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <a href="messages.html" class="text-[13px] text-sky-300 text-center hover:underline">All message</a>
+                        </ul>
+                    </div>
+                <!-- !messages -->
+                <i id="fullscreenBtn" class="fa-solid fa-expand mx-2 sm:ml-6 text-[16px] text-white cursor-pointer"></i>
+            </div>
+        </div>
+    </header>
+   <!-- header !starts here -->
+
+    <!-- navbar start here --> 
+    <div id="navbar" class="w-[220px] min-h-screen px-4 py-3 bg-[#343A40] flex flex-col justify-start items-start">
+                <div class="w-full flex pb-2 items-center justify-center border-b">
+                    <img src="images/favicon1.png" alt="" class="w-6 h-6"> 
+                    <h2 class="w-full text-[18px] text-blue-400 text-center">Admin LTE v1.0</h2>
+                </div>
+            
+                <p class="text-[14px] text-white p-2 mb-2">Primary Menu</p>
+                <ul class="w-full flex flex-col justify-center gap-2">
+                    <li><a class="menu" href="index.html"><i class="fa-solid fa-tv text-[15px] mr-2 "></i>Home</a></li>
+                    <li><a class="menu" href="categories.html"><i class="fa-solid fa-sitemap text-[15px] mr-2"></i>categories</a></li>
+                    <li><a class="menu" href="statics.html"><i class="fa-solid fa-clock-rotate-left text-[15px] mr-2"></i>Statics</a></li>
+                    <li><a class="menu" href="products.html"><i class="fa-solid fa-layer-group text-[15px] mr-2"></i>products</a></li>
+                    <li><a class="menu" href="Slides.html"><i class="fa-solid fa-sliders text-[15px] mr-2"></i>Slides</a></li>
+                    <li><a class="menu" href="orders.html"><i class="fa-solid fa-truck text-[15px] mr-2"></i>orders</a></li>
+                    <li><a class="menu" href="users.html"><i class="fa-solid fa-people-group text-[15px] mr-2"></i>users</a></li>
+                    <li><a class="menu" href="sellers.html"><i class="fa-solid fa-house-laptop text-[15px] mr-2"></i>manage seller</a></li>
+                    <li><a class="menu" href="reviews.html"><i class="fa-solid fa-comment-dots text-[15px] mr-2"></i>reviews</a></li>
+                </ul>
+
+                <p class="text-[14px] text-white p-2 mb-2 mt-6">Controll Menu</p>
+                <ul class="w-full flex flex-col justify-center gap-1">
+                    <li><a class="menu" href="coupons.html"><i class="fa-solid fa-tags text-[15px] mr-2"></i>coupons</a></li>
+                    <li><a class="menu" href="tickets.html"><i class="fa-solid fa-clipboard-list text-[15px] mr-2"></i>tickets</a></li>
+                    <li><a class="menu" href="profile.html"><i class="fa-solid fa-address-card text-[15px] mr-2"></i>manage profile</a></li>
+                    <li><a class="menu" href="Settings.html"><i class="fa-solid fa-gears text-[15px] mr-2"></i>Settings</a></li>
+                </ul>
+    </div>
+    <!-- navbar !start here -->   
+
+   <!-- home start here-->
+    <section id="home">
+        <!-- main starts here -->
+        <section id="main" class="min-h-[98vh] py-3 px-4 mt-12 bg-[#F1F5F9]">
+            <div class="max-w-[1200px] mx-auto flex flex-col gap-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="py-2 text-slate-700 text-xl">Dashboard <span class="text-blue-600">v1.0</span></h2>
+                        <h2 class="py-2 text-slate-700 text-sm">Home / <span class="text-blue-600">Settings</span></h2>
+                    </div>
+
+                    <div class="flex flex-col justify-start items-start">
+                        <h1 class="text-[16px] text-gray-700 font-medium my-2 py-2"><i class="fa-solid fa-gears mr-2"></i>Manage settings</h1>
+                        <div class="flex items-center justify-start">
+                            <button id="button1" class="btnactive px-3 py-2 text-[15px] text-slate-700 border-b border-slate-600 ">Primary Settings</button>
+                            <button id="button2" class="px-3 py-2 text-[15px] text-slate-700 border-b border-slate-600 ">Front End settings</button>
+                            <button id="button3" class="px-3 py-2 text-[15px] text-slate-700 border-b border-slate-600">Profile Settings</button>
+                        </div>
+                        
+
+                        <div id="page1" class="w-full px-4 py-3 content bg-white border">
+                            <p>Manage Primary Settings</p>
+                            <div class="px-4 mt-4 flex flex-col gap-2">
+                                <div class="pb-2 flex justify-between items-center gap-2 border-b border-gray-300">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-gray-800 font-medium">Company News</h3>
+                                        <p class="text-[13px] font-thin">Get Themesberg news, announcements, and product updates</p>
+                                    </div>
+                                    <div>
+                                        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-400 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 border-blue-300"></div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="pb-2 flex justify-between items-center gap-2 border-b border-gray-300">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-gray-800 font-medium">Account Activity</h3>
+                                        <p class="text-[13px] font-thin">Get important notifications about you or activity you've missed</p>
+                                    </div>
+                                    <div>
+                                        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-400 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 border-blue-300"></div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="pb-2 flex justify-between items-center gap-2 border-b border-gray-300">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-gray-800 font-medium">Buyer review notifications</h3>
+                                        <p class="text-[13px] font-thin">Send me an email when someone leaves a review with their rating</p>
+                                    </div>
+                                    <div>
+                                        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-400 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 border-blue-300"></div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="pb-2 flex justify-between items-center gap-2 border-b border-gray-300">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-gray-800 font-medium">Email Notifications</h3>
+                                        <p class="text-[13px] font-thin">Send an email reminding me to rate an item a week after purchase</p>
+                                    </div>
+                                    <div>
+                                        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-400 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 border-blue-300"></div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="pb-2 flex justify-between items-center gap-2">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-gray-800 font-medium">New Messages</h3>
+                                        <p class="text-[13px] font-thin">Get Themsberg news, announcements, and product updates</p>
+                                    </div>
+                                    <div>
+                                        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-400 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 border-blue-300"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="px-4 py-2 w-[200px] bg-blue-400 hover:bg-blue-500 rounded-md text-[15px] text-white">Save Changes</button>
+                            </div>
+                        </div>
+                        <div id="page2" class="w-full px-4 py-3 content bg-white border content hidden">
+                            <p>Manage Front Settings</p>
+                            <div class="px-4 mt-4 flex flex-col gap-2">
+                                <div class="pb-2 flex justify-between items-center gap-2 border-b border-gray-300">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-gray-800 font-medium">User Authentication</h3>
+                                        <p class="text-[13px] font-thin">Turn off or on user login Registration</p>
+                                    </div>
+                                    <div>
+                                        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-400 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 border-blue-300"></div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="pb-2 flex justify-between items-center gap-2 border-b border-gray-300">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-gray-800 font-medium">Payment Channel</h3>
+                                        <p class="text-[13px] font-thin">Turn off or toggle payment channel</p>
+                                    </div>
+                                    <div>
+                                        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-400 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 border-blue-300"></div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="pb-2 flex justify-between items-center gap-2 border-b border-gray-300">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-gray-800 font-medium">Customer Review</h3>
+                                        <p class="text-[13px] font-thin">Recieve Customer Review and Ratings</p>
+                                    </div>
+                                    <div>
+                                        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-400 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 border-blue-300"></div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="pb-2 flex justify-between items-center gap-2 border-b border-gray-300">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-gray-800 font-medium">Notification</h3>
+                                        <p class="text-[13px] font-thin">Get notifications from front end and users activities</p>
+                                    </div>
+                                    <div>
+                                        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-400 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 border-blue-300"></div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="pb-2 flex justify-between items-center gap-2">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="text-gray-800 font-medium">Messaging</h3>
+                                        <p class="text-[13px] font-thin">Get message notification directly to header bar</p>
+                                    </div>
+                                    <div>
+                                        <label class="relative inline-flex items-center mr-5 cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-400 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 border-blue-300"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pb-2 mb-4 flex justify-start items-center gap-2">
+                                    <div class="w-[90%] flex flex-wrap gap-2">
+                                        <label for="number" class="label"><i class="fa-solid fa-envelope mr-1"></i>Change Email</label>
+                                        <input type="email" name="email" placeholder="Email address" value="example@mail.com" class="input">
+                                    </div>
+                                </div>
+                                <button class="px-4 py-2 w-[200px] bg-blue-400 hover:bg-blue-500 rounded-md text-[15px] text-white">Save Changes</button>
+                                </div>
+                        </div>
+                        
+                        <div id="page3" class="w-full px-4 py-3 content bg-white border content hidden">
+                            <p>Manage Profile  Settings</p>
+                            <form action="" class="px-4 py-3 flex flex-col gap-4">
+                                <div class="w-full flex justify-between gap-4 md:gap-10">
+                                    <div class="w-full flex flex-col gap-2">
+                                        <label for="name" class="label"><i class="fa-regular fa-user mr-1"></i> Full Name</label>
+                                        <input type="text" name="name" placeholder="Your full name" value="John Deo" class="input">
+                                    </div>
+                                    <div class="w-full flex flex-col gap-2">
+                                        <label for="email" class="label"><i class="fa-regular fa-envelope mr-1"></i> Email</label>
+                                        <input type="text" name="name" placeholder="Email address" value="Exampl@email.com" class="input">
+                                    </div>
+                                </div>
+                                <div class="w-full flex justify-between gap-4 md:gap-10">
+                                    <div class="w-full flex flex-col gap-2">
+                                        <label for="Address" class="label"><i class="fa-solid fa-location-dot mr-1"></i>Address</label>
+                                        <input type="text" name="Address" placeholder="Home address" value="#Newyork city , 77th road" class="input">
+                                    </div>
+                                    <div class="w-full flex flex-col gap-2">
+                                        <label for="number" class="label"><i class="fa-solid fa-mobile-screen mr-1"></i>Phone number</label>
+                                        <input type="number" name="number" placeholder="Email address" value="013242344" class="input">
+                                    </div>
+                                </div>
+                                <div class="w-full flex flex-col gap-2">
+                                        <label for="Username" class="label"><i class="fa-solid fa-user mr-1"></i>Username</label>
+                                        <input type="text" name="Username" placeholder="Username" value="@johndeo324" class="input">
+                                </div>
+
+                                <button class="px-4 py-2 w-[200px] bg-blue-400 hover:bg-blue-500 rounded-md text-[15px] text-white">Save Changes</button>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </section>
+    </section>    
+
+    <!-- scripts -->
+   <script src="js/script.js"></script>
+   <script>
+        const button1 = document.getElementById('button1');
+        const button2 = document.getElementById('button2');
+        const button3 = document.getElementById('button3');
+        const page1 = document.getElementById('page1');
+        const page2 = document.getElementById('page2');
+        const page3 = document.getElementById('page3');
+
+        button1.addEventListener('click', () => {
+            button1.classList.add('btnactive');
+            button2.classList.remove('btnactive');
+            button3.classList.remove('btnactive');
+            page1.classList.remove('hidden');
+            page2.classList.add('hidden');
+            page3.classList.add('hidden');
+        });
+
+        button2.addEventListener('click', () => {
+            button1.classList.remove('btnactive');
+            button2.classList.add('btnactive');
+            button3.classList.remove('btnactive');
+            page1.classList.add('hidden');
+            page2.classList.remove('hidden');
+            page3.classList.add('hidden');
+        });
+
+        button3.addEventListener('click', () => {
+            button1.classList.remove('btnactive');
+            button2.classList.remove('btnactive');
+            button3.classList.add('btnactive');
+            page1.classList.add('hidden');
+            page2.classList.add('hidden');
+            page3.classList.remove('hidden');
+        });
+   </script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <!-- <link href="https://himelha.github.io/adminLte/dist/output.css" rel="stylesheet"> -->
+    <meta name="description" content="AdminLte is an open source admin dashboard">
+    <meta property="og:title" content="AdminLte v1.0">
+    <title>AdminLte v1.0 dashboard</title>
+    <link rel="icon" type="image/png" href="images/favicon1.png">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="overflow-x-hidden">
+   <!-- header starts here -->
+    <header class="bg-gray-600">
+        <div class="mx-auto flex justify-between items-center sm:px-4">
+            <div class="p-2 flex items-center gap-2 sm:gap-4">
+                <i id="navToggler" class="fa-solid fa-bars text-[16px] text-white cursor-pointer"></i>
+                <h2 class="text-[18px] text-white font-bold">Admin Lite</h2>
+                <a href="index.html" class="text-[14px] text-white font-thin">Home</a>
+            </div>
+            <div id="headerIcons" class="p-2 flex items-center">
+
+                <div class="flex items-center sm:gap-2 relative">
+                    <button id="profileBtn" class="flex items-center gap-2">
+                        <div class="flex-col hidden sm:block sm:flex"><p class="text-white text-[12px]">John Deo</p><span class="text-[10px] text-white font-light">Web Developer</span></div>
+                        <img src="images/profile.jpg" alt="" class="profile">
+                        <i id="arrow" class="fa-solid fa-angle-down text-white text-[14px] mr-4"></i>
+                    </button>
+                    <div class="profileMenu">
+                        <ul>
+                            <li class="mt-2 mb-1"><a href="Profile.html" class="menu text-[14px]"><i class="fa-solid fa-user-shield mr-2"></i>My Profile</a></li>
+                            <li class="mb-1"><a href="Profile.html" class="menu text-[14px]"><i class="fa-solid fa-user-pen mr-2"></i>Edit Profile</a></li>
+                            <li class="mb-2"><a href="settings.html" class="menu text-[14px]"><i class="fa-solid fa-gear mr-2"></i>Account Settings</a></li>
+                            <hr>
+                            <li class="mt-2"><a href="login.html" class="menu text-[14px]"><i class="fa-solid fa-right-from-bracket mr-2"></i>Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <i id="notifyBtn" class="fa-solid fa-bell text-[16px] text-white cursor-pointer"></i><div id="notify"><span>4</span></div>
+                </div>
+                <!-- notfications -->
+                    <div id="notifyNav" class="w-[200px] px-2 pt-3 pb-1 bg-[#24303F] absolute top-[48px] right-0">
+                        <p class="text px-4">Notfications</p>
+                        <ul class="mt-2 flex flex-col gap-1">
+                            <li class="p-2 border border-orange-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-solid fa-circle-exclamation mr-1 text-red-300"></i>Payment gatway reached to limit <span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+                            <li class="p-2 border border-green-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-regular fa-circle-check mr-1 text-green-300"></i>last 2hour 4,900+ page views <span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-solid fa-clipboard-check mr-1 text-sky-300"></i>Your site has reached to 1 million views <span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+
+                            <li class="p-2 border border-yellow-600 rounded-sm">
+                                <p class="text-xs text-white"><i class="fa-solid fa-skull-crossbones mr-1 text-red-400"></i>87 spam user detected in last 2hour<span class="text-[10px] text-slate-300 text-right">12:11PM on 16/8/2023 </span></p>   
+                            </li>
+                            <a href="notifications.html" class="text-[13px] text-sky-300 text-center hover:underline">All notfication</a>
+                        </ul>
+                    </div>
+                <!-- !notfications -->
+                <div class="relative">
+                    <i id="msgBtn" class="fa-solid fa-envelope ml-6 text-[16px] text-white cursor-pointer"></i><div id="notify"><span>6</span></div>
+                </div>
+                    <!-- messages -->
+                    <div id="msgNav" class="w-[200px] px-2 pt-3 pb-1 bg-[#24303F] absolute top-[48px] right-0">
+                        <div class="px-4 flex justify-between items-center">
+                            <p class="text !px-0">Messages</p>
+                            <i class="fa-solid fa-gear text-gray-100 cursor-pointer"></i>
+                        </div>
+                        <ul class="mt-2 flex flex-col gap-1">
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/profile.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/php.png" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/269684781_594096101688265_7584943640798012884_n.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/325937500_727203338994731_2443928018776317505_n.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/HimelHa_robot_war_in_future_world_243a5fe4-6376-4164-95b7-ba3b8d2b076d.png" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-2 border border-blue-600 rounded-sm">
+                                <div class="flex justify-start items-center gap-2">
+                                    <img src="images/profile.jpg" alt="" class="profile">
+                                    <div class="flex flex-col">
+                                        <p class="text-xs text-white">Have 1 new message</p>
+                                        <span class="text-[10px] text-slate-300 text-right">2 min ago</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <a href="messages.html" class="text-[13px] text-sky-300 text-center hover:underline">All message</a>
+                        </ul>
+                    </div>
+                <!-- !messages -->
+                <i id="fullscreenBtn" class="fa-solid fa-expand mx-2 sm:ml-6 text-[16px] text-white cursor-pointer"></i>
+            </div>
+        </div>
+    </header>
+   <!-- header !starts here -->
+
+    <!-- navbar start here --> 
+    <div id="navbar" class="w-[220px] min-h-screen px-4 py-3 bg-[#343A40] flex flex-col justify-start items-start">
+                <div class="w-full flex pb-2 items-center justify-center border-b">
+                    <img src="images/favicon1.png" alt="" class="w-6 h-6"> 
+                    <h2 class="w-full text-[18px] text-blue-400 text-center">Admin LTE v1.0</h2>
+                </div>
+            
+                <p class="text-[14px] text-white p-2 mb-2">Primary Menu</p>
+                <ul class="w-full flex flex-col justify-center gap-2">
+                    <li><a class="menu" href="index.html"><i class="fa-solid fa-tv text-[15px] mr-2 "></i>Home</a></li>
+                    <li><a class="menu" href="categories.html"><i class="fa-solid fa-sitemap text-[15px] mr-2"></i>categories</a></li>
+                    <li><a class="menu" href="statics.html"><i class="fa-solid fa-clock-rotate-left text-[15px] mr-2"></i>Statics</a></li>
+                    <li><a class="menu" href="products.html"><i class="fa-solid fa-layer-group text-[15px] mr-2"></i>products</a></li>
+                    <li><a class="menu" href="Slides.html"><i class="fa-solid fa-sliders text-[15px] mr-2"></i>Slides</a></li>
+                    <li><a class="menu" href="orders.html"><i class="fa-solid fa-truck text-[15px] mr-2"></i>orders</a></li>
+                    <li><a class="menu" href="users.html"><i class="fa-solid fa-people-group text-[15px] mr-2"></i>users</a></li>
+                    <li><a class="menu" href="sellers.html"><i class="fa-solid fa-house-laptop text-[15px] mr-2"></i>manage seller</a></li>
+                    <li><a class="menu" href="reviews.html"><i class="fa-solid fa-comment-dots text-[15px] mr-2"></i>reviews</a></li>
+                </ul>
+
+                <p class="text-[14px] text-white p-2 mb-2 mt-6">Controll Menu</p>
+                <ul class="w-full flex flex-col justify-center gap-1">
+                    <li><a class="menu" href="coupons.html"><i class="fa-solid fa-tags text-[15px] mr-2"></i>coupons</a></li>
+                    <li><a class="menu" href="tickets.html"><i class="fa-solid fa-clipboard-list text-[15px] mr-2"></i>tickets</a></li>
+                    <li><a class="menu" href="profile.html"><i class="fa-solid fa-address-card text-[15px] mr-2"></i>manage profile</a></li>
+                    <li><a class="menu" href="Settings.html"><i class="fa-solid fa-gears text-[15px] mr-2"></i>Settings</a></li>
+                </ul>
+    </div>
+    <!-- navbar !start here -->    
+
+   <!-- home start here-->
+    <section id="home">
+        <!-- main starts here -->
+        <section id="main" class="min-h-[98vh] py-3 px-4 mt-12 bg-[#F1F5F9]">
+            <div class="max-w-[1200px] mx-auto flex flex-col gap-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="py-2 text-slate-700 text-xl">Dashboard <span class="text-blue-600">v1.0</span></h2>
+                        <h2 class="py-2 text-slate-700 text-sm">Home / <span class="text-blue-600">Coupons</span></h2>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex flex-col flex-wrap items-start md:flex-row md:items-center gap-2 sm:gap-4">
+                            <h2 class="py-2 text-slate-700 text-[18px]">Find Coupons</h2>
+                            <div class="bg-blue-600 px-2 py-0 sm:py-1 rounded-sm">
+                                <label for="time" class="text-[13px] text-white">Sort by time</label>
+                                <select name="time" id="" class="px-2 py-1 text-xs text-white bg-blue-600 border-none outline-none">
+                                    <option value="">last added</option>
+                                    <option value="">oldest</option>
+                                </select>
+                            </div>
+                            <div class="bg-blue-600 px-2 py-0 sm:py-1 rounded-sm">
+                                <label for="time" class="text-[13px] text-white">Sort by spelling</label>
+                                <select name="time" id="" class="px-2 py-1 text-xs text-white bg-blue-600 border-none outline-none">
+                                    <option value="">a - z</option>
+                                    <option value="">1-9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--- hiden modals start -->
+                        <div id="addModal" class="px-2 flex justify-center items-center fixed top-0 bottom-0 right-0 left-0 bg-[rgba(0,0,0,0.2)] hidden">
+                            <div class="px-6 py-8 w-[600px] flex flex-col justify-center items-center bg-white rounded-md relative">
+                                <button class="btn absolute top-3 right-3" id="close"><i class="fa-solid fa-close"></i></button>
+                                <h2 class="text-gray-600 text-[17px]">Add New Coupon</h2>
+
+                                <form action="" class="w-full flex flex-col justify-center gap-3 mt-5">
+                                    <div class="flex-input">
+                                        <div class="w-full flex flex-col ">
+                                            <label for="title" class="label">Coupon title</label>
+                                            <input type="text" name="title" placeholder="Enter coupon title" class="input">
+                                        </div>
+                                        <div class="w-full flex flex-col ">
+                                            <label for="code" class="label">code</label>
+                                            <input type="text" name="code" placeholder="Enter coupon code" class="input">
+                                        </div>
+                                    </div>
+                                    <div class="flex-input">
+                                        <div class="w-full flex flex-col ">
+                                            <label for="Discount" class="label">Discount</label>
+                                            <input type="text" name="Discount" placeholder="Coupon Discount" class="input">
+                                        </div>
+                                        <div class="w-full flex flex-col">
+                                            <label for="maxusers" class="label">Max users</label>
+                                            <input type="number" name="maxusers" placeholder="coupon max users" class="input">
+                                        </div>
+                                    </div>
+                                    <div class="flex-input">
+                                        <div class="w-full flex flex-col">
+                                            <label for="image" class="label">Coupons applied on</label>
+                                            <select name="" id="" class="select">
+                                                <option value="">All products</option>
+                                                <option value="">Spciefic products</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                       <button type="submit" class="btnred w-full">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="editModal" class="px-2 flex justify-center items-center fixed top-0 bottom-0 right-0 left-0 bg-[rgba(0,0,0,0.2)] hidden">
+                            <div class="px-6 py-8 w-[600px] flex flex-col justify-center items-center bg-white rounded-md relative">
+                                <button class="btn absolute top-3 right-3" id="closeEdit"><i class="fa-solid fa-close"></i></button>
+                                <h2 class="text-gray-600 text-[17px]">Update Coupon</h2>
+
+                                <form action="" class="w-full flex flex-col justify-center gap-3 mt-5">
+                                    <div class="flex-input">
+                                        <div class="w-full flex flex-col ">
+                                            <label for="title" class="label">Coupon title</label>
+                                            <input type="text" name="title" placeholder="Enter coupon title" value="New user discount" class="input">
+                                        </div>
+                                        <div class="w-full flex flex-col ">
+                                            <label for="code" class="label">code</label>
+                                            <input type="text" name="code" placeholder="Enter coupon code" value="#NEWECOM22" class="input uppercase">
+                                        </div>
+                                    </div>
+                                    <div class="flex-input">
+                                        <div class="w-full flex flex-col ">
+                                            <label for="Discount" class="label">Discount</label>
+                                            <input type="text" name="Discount" placeholder="Coupon Discount" value="4.5%" class="input">
+                                        </div>
+                                        <div class="w-full flex flex-col">
+                                            <label for="maxusers" class="label">Max users</label>
+                                            <input type="number" name="maxusers" placeholder="coupon max users" value="500" class="input">
+                                        </div>
+                                    </div>
+                                    <div class="flex-input">
+                                        <div class="w-full flex flex-col">
+                                            <label for="image" class="label">Coupons applied on</label>
+                                            <select name="" id="" class="select">
+                                                <option value="">All products</option>
+                                                <option value="">Spciefic products</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                       <button type="submit" class="btnred w-full">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- hidden modals end-->
+
+                        <button class="btn" id="add">Add Coupon</button>
+                    </div> 
+                    <!-- table start -->
+                    <div class="w-full overflow-x-auto mt-4">
+                        <table class="min-w-[1000px] mx-auto">
+                            <thead>
+                                <tr class="bg-gradient-to-t from-gray-200 to-gray-300 shadow-sm shadow-slate-400 uppercase">
+                                    <th class="px-3 py-2 text-[15px] text-slate-600">cid</th>
+                                    <th class="px-3 py-2 text-[15px] text-slate-600">Coupons name</th>
+                                    <th class="px-3 py-2 text-[15px] text-slate-600">Coupons code</th>
+                                    <th class="px-3 py-2 text-[15px] text-slate-600">discount</th>
+                                    <th class="px-3 py-2 text-[15px] text-slate-600">max user</th>
+                                    <th class="px-3 py-2 text-[15px] text-slate-600">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-200 mb-2">
+                                    <td class="px-3 py-3 text-[14px] text-zinc-600 text-center">29</td>
+                                    <td class="px-3 py-3 text-[14px] text-zinc-600 text-center">New user discount</td>
+                                    <td class="px-3 py-3 text-[14px] text-zinc-600 text-center">#NewAdmin</td>
+                                    <td class="px-3 py-3 text-[14px] text-zinc-600 text-center flex justify-center"><button class="sucBtn">9.5%</button></td>
+                                    <td class="px-3 py-3 text-[14px] text-zinc-600 text-center">500</td>
+                                    <td class="px-3 py-3 text-[14px] text-zinc-600 text-center">
+                                       <div class="flex items-center justify-center gap-2">
+                                        <button class="editBtn" id="edit">Edit</button>
+                                        <button class="delBtn">Delete</button>
+                                       </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- table end -->
+
+                    <!-- pagination start -->
+                    <div class="max-w-[400px] mx-auto mt-2">
+                        <div class="flex items-center gap-2">
+                            <a href="page"><button class="paginationBtn">Prev</button></a>
+                            <a href="page"><button class="paginationBtn">4</button></a>
+                            <a href="page"><button class="paginationBtn">5</button></a>
+                            <a href="page"><button class="paginationBtn">6</button></a>
+                            <a href="page"><button class="paginationBtn">...</button></a>
+                            <a href="page"><button class="paginationBtn">Next</button></a>
+                        </div>
+                    </div>
+                    <!-- !pagination start -->
+                </div>
+        </section>
+    </section>    
+
+    <!-- scripts -->
+   <script src="js/script.js"></script>
+</body>
+</html>
