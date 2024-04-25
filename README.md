@@ -1,5 +1,5 @@
 # adminLte
-admin lte is free for everyone. use it anywhere
+adminLte is free a free admin dashboard template. Created with html,tailwind css and javascript
 
 <h2 style="color:blue;">Admin Lte V1.0</h2>
 
@@ -8,12 +8,13 @@ admin lte is free for everyone. use it anywhere
 <br>
 
 <h2> Download and use it in your project </h2>
-step 1.
+#### step 1.
 <p>download and open project in your vs code</p>
 
-step 2.
+#### step 2.
 <h3>Run this command</h3>
 In your teminal
 <i> npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch </i>
+It's done. Now you can use it in your project
 
-<h1> done . customize and use it</h1>
+### If you found this project helpful don't forget to give 🌟
